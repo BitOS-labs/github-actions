@@ -2,6 +2,6 @@ FROM alpine:3
 
 RUN ["/bin/sh", "-c", "apk add --update --no-cache bash ca-certificates curl git jq openssh"]
 
-COPY ["src", "/src/"]
+COPY ["bin", "/bin"]
 
-ENTRYPOINT ["/src/main.sh"]
+ENTRYPOINT ["/bin/main.sh"]
