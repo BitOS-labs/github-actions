@@ -10,7 +10,7 @@ inputs:
     required: true
   tf_actions_binary:
     description: 'Binary to use. Terraform or Terragrunt'
-    default: 'terragrunt'
+    default: 'terragrunt run-all'
   tf_actions_version:
     description: 'Terraform version to install.'
     required: true
