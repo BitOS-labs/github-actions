@@ -3,7 +3,7 @@
 function terragruntDestroy {
   # Gather the output of `terragrunt destroy`.
   echo "destroy: info: destroying Terragrunt-managed infrastructure in ${tfWorkingDir}"
-  destroyOutput=$(${tfBinary} destroy -auto-approve -input=false ${*} 2>&1)
+  destroyOutput=$(${tfBinary} destroy --terragrunt-non-interactive -input=false ${*} 2>&1)
   destroyExitCode=${?}
   destroyCommentStatus="Failed"
 
